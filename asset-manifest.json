@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/studentmanager/static/css/main.b445face.chunk.css",
+    "main.js": "/studentmanager/static/js/main.7c3e2f65.chunk.js",
+    "main.js.map": "/studentmanager/static/js/main.7c3e2f65.chunk.js.map",
+    "runtime-main.js": "/studentmanager/static/js/runtime-main.13ddd964.js",
+    "runtime-main.js.map": "/studentmanager/static/js/runtime-main.13ddd964.js.map",
+    "static/css/2.61b4cb56.chunk.css": "/studentmanager/static/css/2.61b4cb56.chunk.css",
+    "static/js/2.d7c69d5c.chunk.js": "/studentmanager/static/js/2.d7c69d5c.chunk.js",
+    "static/js/2.d7c69d5c.chunk.js.map": "/studentmanager/static/js/2.d7c69d5c.chunk.js.map",
+    "static/js/3.b61629a0.chunk.js": "/studentmanager/static/js/3.b61629a0.chunk.js",
+    "static/js/3.b61629a0.chunk.js.map": "/studentmanager/static/js/3.b61629a0.chunk.js.map",
+    "index.html": "/studentmanager/index.html",
+    "static/css/2.61b4cb56.chunk.css.map": "/studentmanager/static/css/2.61b4cb56.chunk.css.map",
+    "static/css/main.b445face.chunk.css.map": "/studentmanager/static/css/main.b445face.chunk.css.map",
+    "static/js/2.d7c69d5c.chunk.js.LICENSE.txt": "/studentmanager/static/js/2.d7c69d5c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13ddd964.js",
+    "static/css/2.61b4cb56.chunk.css",
+    "static/js/2.d7c69d5c.chunk.js",
+    "static/css/main.b445face.chunk.css",
+    "static/js/main.7c3e2f65.chunk.js"
+  ]
+}
