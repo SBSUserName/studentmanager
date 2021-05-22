@@ -12,7 +12,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
     return (
         <Provider>
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
             <Header />
             <div className="container">
                 <Switch>
