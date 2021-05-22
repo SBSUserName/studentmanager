@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/studentmanager/static/css/main.fee9b1a4.chunk.css",
+    "main.css": "/studentmanager/static/css/main.21f66c90.chunk.css",
     "main.js": "/studentmanager/static/js/main.4a97da5c.chunk.js",
     "main.js.map": "/studentmanager/static/js/main.4a97da5c.chunk.js.map",
     "runtime-main.js": "/studentmanager/static/js/runtime-main.13ddd964.js",
@@ -12,14 +12,14 @@
     "static/js/3.b61629a0.chunk.js.map": "/studentmanager/static/js/3.b61629a0.chunk.js.map",
     "index.html": "/studentmanager/index.html",
     "static/css/2.61b4cb56.chunk.css.map": "/studentmanager/static/css/2.61b4cb56.chunk.css.map",
-    "static/css/main.fee9b1a4.chunk.css.map": "/studentmanager/static/css/main.fee9b1a4.chunk.css.map",
+    "static/css/main.21f66c90.chunk.css.map": "/studentmanager/static/css/main.21f66c90.chunk.css.map",
     "static/js/2.1c88d77d.chunk.js.LICENSE.txt": "/studentmanager/static/js/2.1c88d77d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.13ddd964.js",
     "static/css/2.61b4cb56.chunk.css",
     "static/js/2.1c88d77d.chunk.js",
-    "static/css/main.fee9b1a4.chunk.css",
+    "static/css/main.21f66c90.chunk.css",
     "static/js/main.4a97da5c.chunk.js"
   ]
 }
