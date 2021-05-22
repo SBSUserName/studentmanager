@@ -1,0 +1,33 @@
+.student-card {
+    box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 2rem;
+
+    .header-info {
+        display: flex;
+        justify-content: space-between;
+
+        .header-title {
+            cursor: pointer;
+        }
+
+        .close-icon {
+            cursor: pointer;
+            padding: 0 10px;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.125);
+        }
+    }
+}
+
+.add-student-wrapper {
+    .title {
+        background-color: lightgray;
+        padding: 10px 20px;
+    }
+
+    .student-form {
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.125);
+        padding: 15px;
+    }
+}

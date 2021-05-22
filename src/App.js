@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/header/Header";
+import Home from "./pages/Home";
+import AddStudent from "./components/student/AddStudent";
+import EditStudent from "./components/student/EditStudent";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Provider from "./context";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Provider>
+            <Router>
+            <Header />
+            <div className="container">
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/addStudent" component={AddStudent} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/edit/:id" component={EditStudent} />
+                    <Route component={NotFound} />
+                </Switch>
+            </div>
+            </Router>
+        </Provider>
+    );
 }
 
 export default App;

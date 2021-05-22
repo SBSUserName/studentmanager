@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    padding: 1rem;
+    color: white;
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+
+        ul {
+            display: flex;
+            margin-bottom: 0;
+            align-items: center;
+
+            li {
+                list-style: none;
+                margin-left: 2rem;
+                font-weight: 600;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                margin-left: 2rem;
+            }
+        }
+    }
+}
