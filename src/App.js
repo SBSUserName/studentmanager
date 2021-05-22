@@ -7,6 +7,8 @@ import NotFound from "./pages/NotFound";
 import Provider from "./context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import "./index.css"
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
