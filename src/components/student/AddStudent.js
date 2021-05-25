@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import TextInputGroup from "../textInputGroup/TextInputGroup";
 import { v1 as uuidv1 } from "uuid";
-import { Consumer } from "../../context";
-import axios from "axios";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { addStudent } from "../../actions/studentActions";
 
-export default class AddStudent extends Component {
+class AddStudent extends Component {
     state = {
         name: "",
         username: "",
@@ -16,10 +17,8 @@ export default class AddStudent extends Component {
         this.setState({ [e.target.name]: e.target.value });
     };
 
-    submitStudent = async (dispatch, e) => {
+    submitStudent = (e) => {
         e.preventDefault();
-
-        console.log(dispatch);
 
         const { name, username, phone } = this.state;
 
@@ -42,65 +41,61 @@ export default class AddStudent extends Component {
             id: uuidv1(),
             name,
             username,
-            phone
-        }
+            phone,
+        };
 
-        const res = await axios.post('https://jsonplaceholder.typicode.com/users', newStudent)
+        this.props.addStudent(newStudent);
 
-        dispatch({type: 'ADD_STUDENT', payload: res.data})
-
-        this.props.history.push('/')
+        this.props.history.push("/");
     };
 
     render() {
         const { name, username, phone, errors } = this.state;
 
         return (
-            <Consumer>
-                {(value) => {
-                    const { dispatch } = value;
+            <div className="add-student-wrapper">
+                <h2 className="title">Add Student</h2>
 
-                    return (
-                        <div className="add-student-wrapper">
-                            <h2 className="title">Add Student</h2>
+                <form
+                    onSubmit={this.submitStudent}
+                    className="student-form"
+                >
+                    <TextInputGroup
+                        name="name"
+                        label="Name"
+                        value={name}
+                        placeholder="Enter Name"
+                        onChange={this.onChange}
+                        error={errors.name}
+                    />
 
-                            <form
-                                onSubmit={this.submitStudent.bind(this, dispatch)}
-                                className="student-form"
-                            >
-                                <TextInputGroup
-                                    name="name"
-                                    label="Name"
-                                    value={name}
-                                    placeholder="Enter Name"
-                                    onChange={this.onChange}
-                                    error={errors.name}
-                                />
+                    <TextInputGroup
+                        name="username"
+                        label="Username"
+                        value={username}
+                        placeholder="Enter Username"
+                        onChange={this.onChange}
+                        error={errors.username}
+                    />
 
-                                <TextInputGroup
-                                    name="username"
-                                    label="Username"
-                                    value={username}
-                                    placeholder="Enter Username"
-                                    onChange={this.onChange}
-                                    error={errors.username}
-                                />
+                    <TextInputGroup
+                        name="phone"
+                        label="Phone"
+                        value={phone}
+                        placeholder="Enter Phone"
+                        onChange={this.onChange}
+                        error={errors.phone}
+                    />
 
-                                <TextInputGroup
-                                    name="phone"
-                                    label="Phone"
-                                    value={phone}
-                                    placeholder="Enter Phone"
-                                    onChange={this.onChange}
-                                    error={errors.phone}
-                                />
-
-                                <input type="submit" />
-                            </form>
-                        </div>
-                    );
-                }}
-            </Consumer>
+                    <input type="submit" />
+                </form>
+            </div>
         );
     }
 }
+
+AddStudent.propTypes = {
+    addStudent: PropTypes.func.isRequired
+}
+
+export default connect(null, { addStudent })(AddStudent);
